@@ -11,6 +11,9 @@ FIFO structures are commonly used in digital designs to decouple data producers 
 The synchronous FIFO is intended for same-clock environments, while the asynchronous FIFO supports independent read and write clocks and is suitable for clock domain crossing (CDC) scenarios.
 
 ---
+<img width="1112" height="516" alt="image" src="https://github.com/user-attachments/assets/0c27de5a-e26b-40e7-b9ab-57e3fb0ec9e7" />
+
+
 
 ## Design Architecture
 
@@ -22,6 +25,10 @@ The FIFO designs are built around a dual-port memory block that allows simultane
 For the asynchronous FIFO, Gray-coded pointers are employed to safely transfer pointer information between clock domains and reduce the risk of metastability.
 
 ---
+<img width="897" height="610" alt="image" src="https://github.com/user-attachments/assets/01954b5d-1030-4201-ad1d-9436affff59e" />
+<img width="558" height="328" alt="image" src="https://github.com/user-attachments/assets/40958595-79bf-4b71-adb0-30aa7f5ea497" />
+
+
 
 ## Key Features
 
@@ -43,6 +50,9 @@ Verification is performed using Verilog testbenches to validate FIFO functionali
 Synthesis and timing analysis are carried out using Xilinx Vivado to evaluate resource usage and design performance.
 
 ---
+<img width="828" height="363" alt="image" src="https://github.com/user-attachments/assets/ee60a975-0d9f-41eb-a565-b8d1d93093d6" />
+
+
 
 ## Tools and Technologies
 
