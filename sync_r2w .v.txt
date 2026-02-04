@@ -1,0 +1,23 @@
+module sync_r2w #(
+    parameter ADDR_WIDTH = 4
+)(
+    input  wire                wclk,
+    input  wire                wrst_n,
+    input  wire [ADDR_WIDTH:0] rptr_gray,
+
+    output reg  [ADDR_WIDTH:0] rptr_gray_sync
+);
+
+    reg [ADDR_WIDTH:0] rptr_gray_ff1;
+
+    always @(posedge wclk or negedge wrst_n) begin
+        if (!wrst_n) begin
+            rptr_gray_ff1  <= 0;
+            rptr_gray_sync <= 0;
+        end else begin
+            rptr_gray_ff1  <= rptr_gray;
+            rptr_gray_sync <= rptr_gray_ff1;
+        end
+    end
+
+endmodule
